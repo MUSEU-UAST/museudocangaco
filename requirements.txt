@@ -10,5 +10,6 @@ gunicorn==19.8.1
 fab==2.0.1
 fabric2==2.4.0
 Fabric3==1.14.post1
+mysqlclient==1.4.5
 
 
