@@ -5,3 +5,17 @@ tar -xf Python-3.10.*.tgz
 cd Python-3.10.*/
 ./configure --enable-optimizations
 sudo make altinstall
+
+165.22.191.46
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'museucangaco',
+        'USER': 'root',
+        'PASSWORD': '#@2admin123admin#@2!',
+        'HOST': 'localhost',
+        'PORT': '3306', }
+}
+
+
+@admin123admin@
