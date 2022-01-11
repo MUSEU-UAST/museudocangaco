@@ -1,0 +1,27 @@
+{% load static %}
+<div class="footer-widget-area">
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between">
+            <div class="col-lg-6">
+                <div class="single-footer-widget">
+                    <div class="footer-logo">
+                        <a href="#"><img src="{% static 'img/NOVAS/museu-do-cangaço.png' %}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="single-footer-widget">
+                    <h3>Fale conosco</h3>
+                    <a href="tel:0123-456-789"><i class="fa fa-phone"></i>{{ request.museum_info.phone }}</a>
+                    <span><i class="fa fa-envelope"></i>{{ request.museum_info.email }}</span>
+                    <span><i class="fa fa-map-marker"></i>{{ request.museum_info.address }}</span>
+                    <div class="social-icons">
+                        <a href="{{ request.museum_info.facebook }}" target="_blank"><i class="zmdi zmdi-facebook"></i></a>
+                        <a href="{{ request.museum_info.youtube }}" target="_blank"><i class="zmdi zmdi-youtube"></i></a>
+                        <a href="{{ request.museum_info.instagram }}" target="_blank"><i class="zmdi zmdi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

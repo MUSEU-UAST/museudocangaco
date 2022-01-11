@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>Museu do Cangaço</title>
+    {% include 'components/style_imports.html' %}
+    <script>window.CKEDITOR_BASEPATH = '{% static 'ckeditor/ckeditor/' %}';</script>
+
+</head>
+<body>
+<div class="as-mainwrapper wrapper-wide{% block wrapper_class %}{% endblock wrapper_class %}">
+
+    {% block navbar %}
+        {% include 'components/main_navbar.html' %}
+    {% endblock navbar %}
+
+    <div style="min-height: 100vh;">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+
+    {% block footer %}
+        {% include 'components/newsletter.html' %}
+        {% include 'components/footer.html' %}
+    {% endblock footer %}
+</div>
+{% include 'components/scripts_imports.html' %}
+{{ comment_form.media }}
+{{ comment_form.media }}
+</body>
+</html>

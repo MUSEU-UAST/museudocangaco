@@ -1,0 +1,25 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% block branding %}
+    <h1 id="site-name"><a href="{% url 'admin:index' %}">Administração - Museu do Cangaço</a></h1>
+{% endblock %}
+{% block extrahead %}
+    <style>
+        :root {
+            --primary: #9F4310;
+            --secondary: #5B280C;
+            --link-fg: #9F4310;
+            --link-selected-fg: brown;
+            --body-fg: #222;
+            --body-bg: #fff;
+            --body-quiet-color: #333;
+            --body-loud-color: #000;
+            --darkened-bg: #f8f8f8; /* A bit darker than --body-bg */
+            --selected-bg: #e4e4e4; /* E.g. selected table cells */
+            --selected-row: #ffc;
+            --link-hover-color: sandybrown;
+        }
+    </style>
+    <script>window.CKEDITOR_BASEPATH = '{% static 'ckeditor/ckeditor/' %}';</script>
+    {{ block.super }}
+{% endblock %}

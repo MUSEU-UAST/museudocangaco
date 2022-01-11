@@ -1,0 +1,40 @@
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-title-wrapper">
+                <div class="section-title">
+                    <h3>Eventos</h3>
+                    <p>Venha participar de nossos eventos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-between">
+        {% for event in event_list|slice:"6" %}
+            <div class="col-lg-4 col-md-6">
+                <div class="single-event-item">
+                    <div class="single-event-image bg-dark">
+                        <a href="{{ event.cover.url }}">
+                            <img src="{{ event.cover.url }}" alt="">
+                            <span class="text-brown"><span>15</span>Jun</span>
+                        </a>
+                    </div>
+                    <div class="single-event-text" style="height:256px;">
+                        <h3><a href="{% url 'portal:event-view' event.slug %}">{{ event.title }}</a></h3>
+                        <div class="single-item-comment-view">
+                            <span><i
+                                    class="zmdi zmdi-time"></i>De {{ event.start_date }} até {{ event.end_date }} </span>
+                            <span><i class="zmdi zmdi-pin"></i>{{ event.address }}</span>
+                        </div>
+                        <p>{{ event.description|truncatechars:64 }}</p>
+                        <a class="button-default" href="{% url 'portal:event-view' event.slug %}">Saiba mais...</a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="w-100 text-center">
+                <h3>Nenhum evento encontrado...</h3>
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,49 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block content %}
+    <main class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title-wrapper">
+                    <div class="section-title">
+                        <h3>Detalhes do Livro</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="event-details-content">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="product-details-image">
+                        <img src="{{ book.cover.url }}" alt="" style="height: 100vh">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="product-details-content">
+                        <h2>{{ book.title }}</h2>
+                        <div class="product-name-rating">
+                            <h5>Livro</h5>
+                        </div>
+                        <p>{{ book.description }} </p>
+                        <div class="pt-3 d-flex border-bottom">
+                            <div class="font-weight-bold col-4">Autoria</div>
+                            <div class="text-muted col-8">{{ book.authors }}</div>
+                        </div>
+                        <div class="pt-3 d-flex border-bottom">
+                            <div class="font-weight-bold col-4">Ano</div>
+                            <div class="text-muted col-8">{{ book.release_year }}</div>
+                        </div>
+                        <div class="pt-3 d-flex border-bottom">
+                            <div class="font-weight-bold col-4">Editora</div>
+                            <div class="text-muted col-8">{{ book.publisher }}</div>
+                        </div>
+                        <div class="pt-3 d-flex border-bottom">
+                            <div class="font-weight-bold col-4">ISBN</div>
+                            <div class="text-muted col-8">{{ book.isbn }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock content %}

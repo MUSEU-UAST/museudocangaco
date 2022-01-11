@@ -1,0 +1,132 @@
+<aside class="col-md-4 widget-area end-sidebar-lg" id="right-sidebar" style="position: relative;">
+    <div class="" style="">
+        <aside id="bootnews_social-2" class="widget widget_categories widget_categories_custom">
+            <div class="block-title-12">
+                <h5 class="text-brown">Social</h5>
+                <div class="stripe-line"></div>
+            </div>
+            <ul class="mx-0 list-unstyled social-three text-center mb-4 row">
+                <!--twitter-->
+                <li class="col-4 col-sm-3 col-md-4 py-3 mb-0 col-lg-4 border">
+                    <a class="d-block text-twitter" rel="noopener" href="">
+                        <i class="fa fa-instagram" style="font-size: 32px;"></i>
+                        <span class="d-block">Siga-nos</span>
+                    </a>
+                </li>
+                <!--facebook-->
+                <li class="col-4 col-sm-3 col-md-4 py-3 mb-0 col-lg-4 border">
+                    <a class="d-block text-facebook" rel="noopener" href="">
+                        <i class="fa fa-facebook-official" style="font-size: 32px"></i>
+                        <span class="d-block">Like</span>
+                    </a>
+                </li>
+                <li class="col-4 col-sm-3 col-md-4 py-3 mb-0 col-lg-4 border">
+                    <a class="d-block text-facebook" rel="noopener" href="">
+                        <i class="fa fa-youtube" style="font-size: 32px"></i>
+                        <span class="d-block">Inscreva-se</span>
+                    </a>
+                </li>
+                <!--instagram-->
+            </ul>
+            <div class="gap-0"></div>
+            <!-- end social content -->
+        </aside>
+        <aside id="bootnews_custompost-2" class="widget widget_categories widget_categories_custom">
+            <div class="block-title-12">
+                <h5 class="text-brown">Livros</h5>
+            </div>
+            <!--style 1-->
+            <div class="mb-5">
+                {% for book in book_list %}
+                    <article class="single-latest-item border hover-a mb-4 p-2">
+                        <div class="row">
+                            <div class="col-6">
+                                <!--thumbnail-->
+                                <div class="ratio_110-77 image-wrapper">
+                                    <a href="">
+                                        <img class="img-fluid img-thumbnail"
+                                             src="{% if book.cover %}{{ book.cover.url }}{% endif %}" alt="Capa">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <a href=""><h3>{{ book.title }}</h3></a>
+                                <p>{{ book.description|truncatechars:96 }}</p>
+                            </div>
+                        </div>
+                    </article>
+                {% empty %}
+                    <h6>Nenhum livro encontrado...</h6>
+                {% endfor %}
+            </div>
+            <div class="gap-0"></div>
+        </aside>
+        <aside id="bootnews_latestside-2" class="widget widget_categories widget_categories_custom">
+            <div class="block-title-12">
+                <h5 class="h5 title-box-stripe text-brown">Últimas notícias</h5>
+                <div class="stripe-line"></div>
+            </div>
+
+            {% for post in post_list %}
+                {% if forloop.first %}
+                    <article class="mb-4 single-latest-item">
+                        <div class="image-wrapper" style="height: 202px; overflow: hidden">
+                            <a href="">
+                                <img width="360" height="202"
+                                     src="{% if post.cover %}{{ post.cover.url }}{% endif %}"
+                                     class="img-fluid lazy wp-post-image loaded"
+                                     alt="Capa">
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title h1-sm h3-md">
+                                <a href=""
+                                   rel="author">
+                                    <h2>{{ post.title }}</h2>
+                                </a>
+                            </h2>
+                            <div class="card-text text-muted small mb-2">
+                                <span>{{ post.publication_date }}</span>
+                            </div>
+                            <p class="card-text">{{ post.subtitle|truncatechars:128 }}</p>
+                        </div>
+                    </article>
+                {% else %}
+                    <article class="single-latest-item mb-4">
+                        <div class="row">
+                            <div class="col-3 col-md-4 pe-2 pe-md-0">
+                                <div class="image-wrapper">
+                                    <a href="#">
+                                        <img width="110" height="77"
+                                             src="{% if post.cover %}{{ post.cover.url }}{% endif %}"
+                                             class="img-fluid lazy wp-post-image loaded" alt="Capa">
+                                        <!-- post type -->
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-9 col-md-8">
+                                <div class="card-body pt-0">
+                                    <!--title-->
+                                    <h3 class="card-title h6 h5-sm h6-md">
+                                        <a href="https://demo.bootstrap.news/blog/2019/06/16/scotlands-crannogs-older-than-stonehenge/">Scotland’s
+                                            crannogs older than Stonehenge</a>
+                                    </h3>
+                                    <!--date-->
+                                    <div class="card-text small text-muted">
+                                        <time class="news-date" datetime="2019-06-16T14:09:46+00:00">June 16, 2019
+                                        </time>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                {% endif %}
+            {% empty %}
+                <h6>Nenhuma notícia encontrada...</h6>
+            {% endfor %}
+
+        </aside>
+
+    </div>
+</aside>

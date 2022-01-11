@@ -1,0 +1,76 @@
+{% load static %}
+<header class="header-one">
+    <div class="header-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-7 col-md-5 d-none d-lg-block d-md-block">
+                    <span>Bem vindo, {% if request.user.is_authenticated %}{{ request.user }}{% else %}
+                        Visitante{% endif %}!!</span>
+                </div>
+                <div class="col-lg-5 col-md-7 col-12">
+                    <div class="header-top-right">
+                        <div class="content"><a href="#"> <i class="zmdi zmdi-account"></i> Login</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-logo-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-12" style="padding-left: 0;">
+                    <div class="logo">
+                        <a href="{% url 'portal:home-view' %}"><img
+                                src="{% static 'img/NOVAS/museu-do-cangaço.png' %}" alt="logo museu do cangaço"></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-12" style="padding-left: 0;">
+                    <div class="logo">
+                        <a href="{% url 'portal:home-view' %}"><img
+                                src="{% static 'img/NOVAS/logo_cabras.png' %}" alt="logo cabras"></a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-12">
+                    <div class="mainmenu-area pull-right">
+                        <div class="mainmenu d-none d-lg-block">
+                            <nav class="">
+                                {% include 'components/menu_links.html' %}
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-2 mt-2">
+                <form action="{% url 'portal:search-view' %}" method="GET" id="search-form"></form>
+                <input class="form-control text-small" type="search" name="search" placeholder="Faça sua busca..." form="search-form" value="{{ request.GET.search }}">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-brown" value="buscar" form="search-form"><i class="zmdi zmdi-search"></i>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mobile-menu-area">
+        <div class="container clearfix mean-container">
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="mobile-menu">
+                        <div class="mean-push"></div>
+                        <nav id="dropdown" style="display: none;">
+                            {% include 'components/menu_links.html' %}
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+

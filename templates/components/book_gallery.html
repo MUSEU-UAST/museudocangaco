@@ -1,0 +1,34 @@
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-title-wrapper">
+                <div class="section-title">
+                    <h3>Livros</h3>
+                    <p>Conheça nosso catálogo de livros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {% for book in book_list %}
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4 d-block rounded">
+                <div class="bg-white single-latest-item rounded shadow-sm border">
+                    <div style="min-height:256px; height: 256px; overflow: hidden;">
+                        <img src="{% if book.cover %}{{ book.cover.url }}{% endif %}" alt=""
+                             class="img-fluid card-img-top">
+                    </div>
+                    <div class="p-4" style="height:128px;">
+                        <h5><a href="{% url 'portal:book-view' book.slug %}" class="text-brown">{{ book.title }}</a></h5>
+                        <p class="small text-muted mb-0">{{ book.description|truncatechars:102 }}</p>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="w-100 text-center">
+                <h3>Nenhum livro encontrado...</h3>
+            </div>
+        {% endfor %}
+
+    </div>
+
+</div>

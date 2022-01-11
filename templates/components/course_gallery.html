@@ -1,0 +1,44 @@
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-title-wrapper">
+                <div class="section-title">
+                    <h3>Cursos</h3>
+                    <p>Aprecie e aprenda conosco.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {% for course in course_list|slice:"3" %}
+            <div class="col-lg-4 col-md-6 col-12 mt-4">
+                <div class="single-item">
+                    <div class="overlay-effect" style="height:256px; min-height: 256px; overflow: hidden;">
+                        <a href="#"><img src="{% if course.cover %}{{ course.cover.url }}{% endif %}" alt="Capa"></a>
+                    </div>
+                    <div class="single-item-text" style="height:256px;">
+                        <h4><a href="#">{{ course.title }}</a></h4>
+                        <div class="single-item-text-info">
+                            <span>Por: <span>{{ course.author }}</span></span>
+                            <span>Começa em: <span>{{ course.date|date:'SHORT_DATE_FORMAT' }}</span></span>
+                        </div>
+                        <p>{{ course.description|truncatechars:128 }}</p>
+                        <div class="single-item-content">
+                            <div class="single-item-comment-view">
+{#                                <span><i class="zmdi zmdi-eye"></i>59</span>#}
+{#                                <span><i class="zmdi zmdi-comments"></i>19</span>#}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-bottom">
+                        <a href="#" class="button-default">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+                <div class="w-100 text-center">
+                    <h3>Nenhum curso encontrado...</h3>
+                </div>
+        {% endfor %}
+    </div>
+</div>

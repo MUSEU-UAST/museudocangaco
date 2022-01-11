@@ -1,0 +1,16 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+    <main class="container">
+        {% include 'components/banner.html' %}
+        {% include 'components/museum_map_location.html' %}
+
+        {% include 'components/post_gallery.html' %}
+
+        {% include 'components/event_gallery.html' %}
+
+        {% include 'components/course_gallery.html' %}
+
+        {% include 'components/book_gallery.html' %}
+
+    </main>
+{% endblock content %}

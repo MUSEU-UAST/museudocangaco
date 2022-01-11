@@ -1,0 +1,39 @@
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-title-wrapper">
+                <div class="section-title">
+                    <h3>Notícias</h3>
+                    <p>Fique por dentro do que está acontecendo conosco.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {% for post in post_list|slice:"6" %}
+            <div class=" col-lg-4 col-md-12 col-12 p-0">
+                <div class="single-latest-item m-4 d-block border rounded">
+                    <div style="min-height:220px; height:220px; overflow:hidden;">
+                        <img src="{% if post.cover %}{{ post.cover.url }}{% endif %}" alt="Capa">
+                    </div>
+                    <div class="single-latest-text" style="min-height:220px; height:220px;">
+                        <h3><a href="{% url 'portal:post-view' post.publication_date.date post.slug %}">{{ post.title }}</a></h3>
+                        <div class="single-item-comment-view">
+                            <span><i class="zmdi zmdi-calendar-check"></i>{{ post.publication_date }}</span>
+                            <span><i class="zmdi zmdi-account"></i>por {{ post.author }}</span>
+                            {#                    <span><i class="zmdi zmdi-eye"></i>59</span>#}
+                            {#                    <span><i class="zmdi zmdi-comments"></i>19</span>#}
+                        </div>
+                        <p>{{ post.subtitle|truncatechars:128 }} </p>
+                        <a href="{% url 'portal:post-view' post.publication_date.date post.slug %}" class="button-default">Saiba mais...</a>
+                    </div>
+                </div>
+
+            </div>
+        {% empty %}
+            <div class="w-100 text-center mb-5">
+                <h3>Nenhuma notícia encontrada...</h3>
+            </div>
+        {% endfor %}
+    </div>
+</div>

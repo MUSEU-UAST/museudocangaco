@@ -1,0 +1,35 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
+    <main class="container">
+        <div class="breadcrumb-banner-area"
+             style="{% if post.cover %}background-image: url({{ post.cover.url }}); background-size: cover;{% endif %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcrumb-text">
+                            <h1 class="text-center">{{ post.title }}</h1>
+                            {% if not url_name == 'page-view' %}
+                                <div class="breadcrumb-bar">
+                                    <ul class="breadcrumb text-center">
+                                        <li><a href="{% url 'portal:home-view' %}">Home</a></li>
+                                        <li><a href="{% url 'portal:post-list-view' %}">Notícias</a></li>
+                                    </ul>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-4 border">
+            <div class="row">
+                <div class="col-lg-8" style="min-height: 100vh">
+                    {{ post.content|safe }}
+                </div>
+                {% include 'components/sidebar.html' %}
+            </div>
+        </div>
+    </main>
+{% endblock content %}

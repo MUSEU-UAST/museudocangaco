@@ -1,0 +1,80 @@
+{% load static %}
+<ul id="nav">
+    <li class="nav-item">
+        <a class="nav-link" href="#">MUSEU</a>
+        <ul class="sub-menu">
+            <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'historia' %}">HISTÓRIA</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'instalacoes-fisicas' %}">INSTALAÇÕES FÍSICAS</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'portal:page-view' 'exposicoes' %}">EXPOSIÇÕES <i class="zmdi zmdi-chevron-right"></i></a>
+                <ul class="inside-menu">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'acervo' %}">ACERVO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'permanentes' %}">PERMANENTES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'temporarias' %}">TEMPORÁRIAS</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'portal:contact-view' %}">CONTATO</a></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">VISITE</a>
+        <ul class="sub-menu">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'portal:page-view' 'informacoes-gerais' %}">INFORMAÇÕES GERAIS</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'visita-virtual' %}">VISITA VIRTUAL</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'portal:page-view' 'agende-sua-visita' %}">AGENDE SUA VISITA</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'portal:post-list-view' %}">NOTÍCIAS</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">EDUCAÇÃO</a>
+        <ul class="sub-menu">
+            <li class="nav-item"><a class="nav-link" href="{% url 'portal:course-list-view' %}">CURSOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'portal:event-list-view' %}">EVENTOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'pesquisa' %}">PESQUISA</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">PROJETOS <i class="zmdi zmdi-chevron-right"></i></a>
+                <ul class="inside-menu">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'sertao-frevo' %}">SERTÃO FREVO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'uoisc' %}">UOISC</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">GRUPOS <i class="zmdi zmdi-chevron-right"></i></a>
+                <ul class="inside-menu">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'xaxado' %}">XAXADO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'frevo' %}">FREVO</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">PUBLICAÇÕES <i class="zmdi zmdi-chevron-right"></i></a>
+                <ul class="inside-menu">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'portal:book-list-view' %}">LIVROS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">CARTILHAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">VIDEOS</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">SERRA TALHADA</a>
+        <ul class="sub-menu">
+            <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'serra-talhada-origem' %}">ORIGEM</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'serra-talhada-ocupacao' %}">OCUPAÇÃO</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'portal:page-view' 'serra-talhada-geografia' %}">GEOGRAFIA</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="zmdi zmdi-chevron-right"></i> ATRATIVOS TURÍSTICOS</a>
+                <ul class="inside-menu left-menu">
+                    <li class="nav-item"><a href="{% url 'portal:page-view' 'pontos-turisticos' %}" class="nav-link">PONTOS TURÍSTICOS</a></li>
+                    <li class="nav-item"><a href="{% url 'portal:page-view' 'hospedagem' %}" class="nav-link">HOSPEDAGEM</a></li>
+                    <li class="nav-item"><a href="{% url 'portal:page-view' 'restaurantes' %}" class="nav-link">RESTAURANTES</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
