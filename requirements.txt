@@ -5,3 +5,10 @@ django-js-asset==1.2.2
 Pillow==9.0.0
 sqlparse==0.4.2
 tzdata==2021.5
+
+gunicorn==19.8.1
+fab==2.0.1
+fabric2==2.4.0
+Fabric3==1.14.post1
+
+
