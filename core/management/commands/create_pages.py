@@ -8,7 +8,6 @@ class Command(BaseCommand):
     def handle(self, **options):
         print('inicio')
         self.create()
-
         print('FIM')
 
     def create(self):
@@ -57,10 +56,6 @@ class Command(BaseCommand):
                             status="1", author="Autor")
 
         Post.objects.create(title="UOISC", subtitle="uoisc", slug="uoisc",
-                            cover=None, category="P", content="...DEFAULT...",
-                            status="1", author="Autor")
-
-        Post.objects.create(title="Sertão Frevo", subtitle="sertão frevo", slug="sertao-frevo",
                             cover=None, category="P", content="...DEFAULT...",
                             status="1", author="Autor")
 
