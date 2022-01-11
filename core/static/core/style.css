@@ -198,55 +198,55 @@ ul {
 
 @font-face {
     font-family: 'montserratbold';
-    src: url('fonts/montserrat-bold-webfont.eot');
-    src: url('fonts/montserrat-bold-webfontd41d.eot?#iefix') format('embedded-opentype'),
-    url('fonts/montserrat-bold-webfont.woff2') format('woff2'),
-    url('fonts/montserrat-bold-webfont.woff') format('woff'),
-    url('fonts/montserrat-bold-webfont.ttf') format('truetype'),
-    url('fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    src: url('core/fonts/montserrat-bold-webfont.eot');
+    src: url('core/fonts/montserrat-bold-webfontd41d.eot?#iefix') format('embedded-opentype'),
+    url('core/fonts/montserrat-bold-webfont.woff2') format('woff2'),
+    url('core/fonts/montserrat-bold-webfont.woff') format('woff'),
+    url('core/fonts/montserrat-bold-webfont.ttf') format('truetype'),
+    url('core/fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'montserratlight';
-    src: url('fonts/montserrat-light-webfont.eot');
-    src: url('fonts/montserrat-light-webfontd41d.eot?#iefix') format('embedded-opentype'),
-    url('fonts/montserrat-light-webfont.woff2') format('woff2'),
-    url('fonts/montserrat-light-webfont.woff') format('woff'),
-    url('fonts/montserrat-light-webfont.ttf') format('truetype'),
-    url('fonts/montserrat-light-webfont.svg#montserratlight') format('svg');
+    src: url('core/fonts/montserrat-light-webfont.eot');
+    src: url('core/fonts/montserrat-light-webfontd41d.eot?#iefix') format('embedded-opentype'),
+    url('core/fonts/montserrat-light-webfont.woff2') format('woff2'),
+    url('core/fonts/montserrat-light-webfont.woff') format('woff'),
+    url('core/fonts/montserrat-light-webfont.ttf') format('truetype'),
+    url('core/fonts/montserrat-light-webfont.svg#montserratlight') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'montserratregular';
-    src: url('fonts/montserrat-regular-webfont.eot');
-    src: url('fonts/montserrat-regular-webfontd41d.eot?#iefix') format('embedded-opentype'),
-    url('fonts/montserrat-regular-webfont.woff2') format('woff2'),
-    url('fonts/montserrat-regular-webfont.woff') format('woff'),
-    url('fonts/montserrat-regular-webfont.ttf') format('truetype'),
-    url('fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    src: url('core/fonts/montserrat-regular-webfont.eot');
+    src: url('core/fonts/montserrat-regular-webfontd41d.eot?#iefix') format('embedded-opentype'),
+    url('core/fonts/montserrat-regular-webfont.woff2') format('woff2'),
+    url('core/fonts/montserrat-regular-webfont.woff') format('woff'),
+    url('core/fonts/montserrat-regular-webfont.ttf') format('truetype'),
+    url('core/fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'montserratsemi_bold';
-    src: url('fonts/montserrat-semibold-webfont.eot');
-    src: url('fonts/montserrat-semibold-webfontd41d.eot?#iefix') format('embedded-opentype'),
-    url('fonts/montserrat-semibold-webfont.woff2') format('woff2'),
-    url('fonts/montserrat-semibold-webfont.woff') format('woff'),
-    url('fonts/montserrat-semibold-webfont.ttf') format('truetype'),
-    url('fonts/montserrat-semibold-webfont.svg#montserratsemi_bold') format('svg');
+    src: url('core/fonts/montserrat-semibold-webfont.eot');
+    src: url('core/fonts/montserrat-semibold-webfontd41d.eot?#iefix') format('embedded-opentype'),
+    url('core/fonts/montserrat-semibold-webfont.woff2') format('woff2'),
+    url('core/fonts/montserrat-semibold-webfont.woff') format('woff'),
+    url('core/fonts/montserrat-semibold-webfont.ttf') format('truetype'),
+    url('core/fonts/montserrat-semibold-webfont.svg#montserratsemi_bold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: Merriweather;
-    src: url("fonts/Merriweather-Regular.ttf");
+    src: url("core/fonts/Merriweather-Regular.ttf");
 }
 
 body {
@@ -333,7 +333,7 @@ body {
 }
 
 .section-title-wrapper:after {
-    background: rgba(0, 0, 0, 0) url("img/icon/hat.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("core/img/icon/hat.png") no-repeat scroll 0 0;
     bottom: -8px;
     color: #1bb4b9;
     content: "";
@@ -357,7 +357,7 @@ body {
 }
 
 .white.section-title-wrapper:after {
-    background: rgba(0, 0, 0, 0) url("img/icon/cap-white.jpg") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("core/img/icon/cap-white.jpg") repeat scroll 0 0;
 }
 
 .carousel-style-one.owl-theme .owl-controls .owl-nav div {
@@ -1764,7 +1764,7 @@ body {
 /*  4. About Area
 /*----------------------------------------*/
 .about-area {
-    background: rgba(0, 0, 0, 0) url("img/banner/1.jpg") no-repeat scroll center top;
+    background: rgba(0, 0, 0, 0) url("core/img/banner/1.jpg") no-repeat scroll center top;
     color: #ffffff;
     margin-top: 140px;
     padding-bottom: 54px;
@@ -1975,7 +1975,7 @@ body {
 /*  6. Fun Factor Area
 /*----------------------------------------*/
 .fun-factor-area {
-    background: rgba(0, 0, 0, 0) url("img/banner/2.jpg") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("core/img/banner/2.jpg") repeat scroll 0 0;
     color: #ffffff;
     padding: 100px 0;
 }
@@ -2158,7 +2158,7 @@ body {
 /*  9. Testimonial Area
 /*----------------------------------------*/
 .testimonial-area {
-    background: rgba(0, 0, 0, 0) url("img/banner/3.jpg") no-repeat scroll 0 0 / cover;
+    background: rgba(0, 0, 0, 0) url("core/img/banner/3.jpg") no-repeat scroll 0 0 / cover;
     overflow: hidden;
     padding: 95px 0 82px;
     position: relative;
@@ -2963,7 +2963,7 @@ body {
 }
 
 .form-container {
-    background: rgba(0, 0, 0, 0) url("img/banner/5.jpg") no-repeat scroll center top;
+    background: rgba(0, 0, 0, 0) url("core/img/banner/5.jpg") no-repeat scroll center top;
     color: #555454;
     font-family: "montserratregular";
     font-size: 12px;
@@ -3011,7 +3011,7 @@ body {
 .select select {
     -moz-appearance: none;
     -webkit-appearance: none;
-    background: #ffffff url("img/icon/arrow.png") no-repeat scroll 92% 50%;
+    background: #ffffff url("core/img/icon/arrow.png") no-repeat scroll 92% 50%;
     border: medium none;
     cursor: pointer;
     height: 42px;
@@ -3488,7 +3488,7 @@ span.comment-time {
 }
 
 .breadcrumb-banner-area.fixed-bg {
-    background: url("img/slider/3.jpg") no-repeat fixed top center / cover
+    background: url("core/img/slider/3.jpg") no-repeat fixed top center / cover
 }
 
 .breadcrumb-banner-area.no-bg {
@@ -4164,15 +4164,15 @@ span.c-text {
 }
 
 .video-area {
-    background: url("img/slider/5.jpg") no-repeat fixed top center / cover
+    background: url("core/img/slider/5.jpg") no-repeat fixed top center / cover
 }
 
 .fixed-bg-1 {
-    background: url("img/slider/1.jpg") no-repeat fixed top center / cover
+    background: url("core/img/slider/1.jpg") no-repeat fixed top center / cover
 }
 
 .fixed-bg-2 {
-    background: url("img/slider/2.jpg") no-repeat fixed top center / cover
+    background: url("core/img/slider/2.jpg") no-repeat fixed top center / cover
 }
 
 .backgrount-area {
@@ -4506,7 +4506,7 @@ span.c-text {
 }
 
 .welcome-video .video-inner {
-    background: url(img/ec-background/welcome-bg.jpg) no-repeat scroll center/cover;
+    background: url(core/img/ec-background/welcome-bg.jpg) no-repeat scroll center/cover;
     height: 100%;
     overflow: hidden;
     padding: 0 25px;
@@ -4721,7 +4721,7 @@ span.c-text {
 
 @font-face {
     font-family: Xilosa;
-    src: url("fonts/xilosa.ttf");
+    src: url("core/fonts/xilosa.ttf");
 }
 
 h1, h2, h3, h4, h5, h6, .xilosa {
