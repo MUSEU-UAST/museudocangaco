@@ -87,4 +87,3 @@ def create_pages():
                         status="1", author="Autor")
 
 
-create_pages()
