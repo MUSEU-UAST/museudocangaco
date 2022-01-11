@@ -4721,7 +4721,7 @@ span.c-text {
 
 @font-face {
     font-family: Xilosa;
-    src: url("core/fonts/xilosa.ttf");
+    src: url("fonts/xilosa.ttf");
 }
 
 h1, h2, h3, h4, h5, h6, .xilosa {
