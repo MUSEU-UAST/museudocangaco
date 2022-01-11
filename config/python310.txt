@@ -17,5 +17,6 @@ DATABASES = {
         'PORT': '3306', }
 }
 
-
+#---------------
+admin
 @admin123admin@
