@@ -85,3 +85,6 @@ def create_pages():
     Post.objects.create(title="Restaurantes", subtitle="restaurantes", slug="restaurantes",
                         cover=None, category="P", content="...DEFAULT...",
                         status="1", author="Autor")
+
+
+create_pages()
