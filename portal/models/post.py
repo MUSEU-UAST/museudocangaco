@@ -2,7 +2,6 @@ from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 from django.utils import timezone
 
-from portal.models.global_choices import USERS
 
 
 class Post(models.Model):
@@ -24,7 +23,8 @@ class Post(models.Model):
     category = models.CharField(max_length=255, choices=CATEGORIES)
     content = RichTextUploadingField(config_name="default")
     status = models.CharField(max_length=255, choices=STATUS)
-    author = models.CharField(max_length=255, choices=USERS)
+    author = models.CharField(max_length=255)
+    # author = models.CharField(max_length=255, choices=USERS)
 
     publication_date = models.DateTimeField(default=timezone.now)
 
