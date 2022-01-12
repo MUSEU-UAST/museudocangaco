@@ -12,13 +12,13 @@
 
 </head>
 <body>
-<div class="as-mainwrapper wrapper-wide{% block wrapper_class %}{% endblock wrapper_class %}">
+<div class="bg-white">
 
     {% block navbar %}
         {% include 'components/main_navbar.html' %}
     {% endblock navbar %}
 
-    <div style="min-height: 100vh;">
+    <div class="col-sm-12 col-md-10 m-auto" style="min-height: 100vh;">
         {% block content %}
 
         {% endblock content %}
