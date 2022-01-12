@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="header-logo-menu">
-        <div class="container">
+        <div class="col-sm-12 col-lg-10 m-auto">
             <div class="row">
                 <div class="col-lg-2 col-12" style="padding-left: 0;">
                     <div class="logo">
@@ -41,15 +41,13 @@
                     </div>
                 </div>
             </div>
-            <div class="input-group mb-2 mt-2">
+            <div class="input-group mt-2 mb-2" style="height: 48px">
                 <form action="{% url 'portal:search-view' %}" method="GET" id="search-form"></form>
-                <input class="form-control text-small" type="search" name="search" placeholder="Faça sua busca..." form="search-form" value="{{ request.GET.search }}">
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-brown" value="buscar" form="search-form"><i class="zmdi zmdi-search"></i>
+                <input class="form-control text-small h-100" type="search" name="search" placeholder="Faça sua busca..." form="search-form" value="{{ request.GET.search }}">
+                <div class="input-group-append h-100">
+                    <button type="submit" class="btn btn-brown h-100" value="buscar" form="search-form"><i class="zmdi zmdi-search"></i>
                     </button>
                 </div>
-
-
             </div>
         </div>
     </div>
